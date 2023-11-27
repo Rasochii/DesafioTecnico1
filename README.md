@@ -2,6 +2,7 @@
 
 ### Para testar a função, basta: 
 
-- ### Abrir o arquivo "desafio.html"
+- ### Baixar o arquivo "desafio.html"
+- ### Executar em um navegador
 - ### Inserir um número no input
 - ### Clicar no botão "Executar"
