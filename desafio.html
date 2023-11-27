@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio Técnico 1</title>
+    </head>
+    <body>
+
+        <h1>Desafio Técnico 1</h1>
+
+        <label for="numeroInput">Digite o número:</label>
+        <input type="number" id="numeroInput" name="numeroInput" oninput="validarNumero(this)">
+
+        <button type="button" onclick="funcaoSomatoria()">Executar</button>
+
+        <p id="resultadoNumero"></p>
+
+        <script>
+            function validarNumero(input) {
+                // Substituir não dígitos por uma string vazia
+                input.value = input.value.replace(/\D/g, '');
+            }
+
+            function funcaoSomatoria() {
+                
+                var numero = document.getElementById("numeroInput").value;
+                var total = 0;
+
+                for( var i = 0; i < numero; i++ ) {
+                    if( i % 3 == 0 || i % 5 == 0) {
+                        total = total + i;
+                    }
+                }
+
+                document.getElementById("resultadoNumero").innerText = "O total é: " + total;
+            }
+        </script>
+
+    </body>
+</html>
